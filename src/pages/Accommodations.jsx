@@ -8,33 +8,28 @@ function Accommodations() {
   // 2. Create a state for the loading status (initialize as true).
   const [loading, setLoading] = useState(true);
 
-  const getAccommodations = async () => {
-    try {
-      const data = await fetch("/data/accommodations.json");
-      const listings = await data.json();
-      setAccommodations(listings);
-    } catch (error) {
-      console.error("Error fetching accommodations data:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   // 3. Use the useEffect hook to fetch data when the component mounts.
   useEffect(() => {
-    // Use the browser's fetch API to get data from '/data/alojamientos.json'.
-    // Remember, fetch returns a promise.
-    // Chain .then() to handle the response.
-    // First, parse the response body as JSON (response.json()).
-    // In the next .then(), you'll get the actual data.
-    // Set the data to your 'accommodations' state.
-    // Finally, set the 'loading' state to false.
-    const timer = setTimeout(() => {
-      getAccommodations();
-    }, 2000);
+    const fetchAccommodations = async () => {
+      try {
+        // Await the response from the fetch call
+        const response = await fetch("/data/accommodations.json");
+        // Await the parsing of the JSON response
+        const data = await response.json();
+        // Set the data and update the loading state
+        setAccommodations(data);
+      } catch (error) {
+        // Log any errors that occur during the fetch
+        console.error("Error fetching accommodations data:", error);
+      } finally {
+        // This will run regardless of success or failure
+        setLoading(false);
+      }
+    };
 
-    return () => clearTimeout(timer);
-  }, []); // An empty dependency array means this effect runs only once.
+    // We keep the timer to simulate a network delay
+    fetchAccommodations();
+  }, []); // Empty dependency array ensures this runs only once on mount.
 
   // 4. Add a conditional render for the loading state.
   if (loading) {
@@ -52,6 +47,7 @@ function Accommodations() {
         {accommodations.map((accommodation) => (
           <Card
             key={accommodation.id}
+            id={accommodation.id}
             title={accommodation.title}
             description={accommodation.description}
             price={accommodation.price}

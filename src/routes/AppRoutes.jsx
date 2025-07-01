@@ -8,7 +8,7 @@ import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 
 // Route Guard Import
-import ProtectedRoute from "../pages/ProtectedRoute";
+import ProtectedRoute from "./ProtectedRoute";
 
 export default function AppRoutes() {
   return (
