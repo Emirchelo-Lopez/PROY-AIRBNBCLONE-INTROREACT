@@ -1,7 +1,3 @@
-// useState & useEffect from react
-// Link and useNavigate from react-router-dom
-// isLoggedIn logout from auth
-
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { isLoggedIn, logout } from "../utils/auth";
