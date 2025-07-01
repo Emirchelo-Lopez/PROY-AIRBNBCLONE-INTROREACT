@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card"; // We'll create this next
+import Spinner from "../components/Spinner";
 
 function Accommodations() {
   // 1. Create a state for the listings data (initialize as an empty array).
@@ -28,12 +29,16 @@ function Accommodations() {
     };
 
     // We keep the timer to simulate a network delay
-    fetchAccommodations();
+    const timer = setTimeout(() => {
+      fetchAccommodations();
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []); // Empty dependency array ensures this runs only once on mount.
 
   // 4. Add a conditional render for the loading state.
   if (loading) {
-    return <div className="text-center mt-10">Loading accommodations...</div>;
+    return <Spinner />;
   }
 
   return (

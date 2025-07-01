@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 function Details() {
   // 1. Use the useParams hook to get the 'id' from the URL.
@@ -32,12 +33,16 @@ function Details() {
       }
     };
 
-    getAccommodation();
+    const timer = setTimeout(() => {
+      getAccommodation();
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, [id]); // Add 'id' as a dependency. The effect will re-run if the id changes.
 
   // 4. Handle the loading state.
   if (loading) {
-    return <div className="text-center mt-10">Loading details...</div>;
+    return <Spinner />;
   }
 
   // 5. Handle the case where the accommodation was not found.
