@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Cozy Beachfront Cottage",
+    "description": "A stunning cottage right on the beach, perfect for a romantic getaway. Enjoy the sound of the waves and beautiful sunsets.",
+    "price": 250,
+    "location": "Malibu, USA",
+    "image": "https://picsum.photos/seed/malibu/400/300"
+  },
+  {
+    "id": 2,
+    "title": "Modern Loft in Urban Center",
+    "description": "Stylish and spacious loft in the heart of the city. Close to all major attractions, restaurants, and nightlife.",
+    "price": 180,
+    "location": "Tokyo, Japan",
+    "image": "https://picsum.photos/seed/tokyo/400/300"
+  },
+  {
+    "id": 3,
+    "title": "Rustic Mountain Cabin",
+    "description": "Escape to this peaceful cabin in the mountains. Features a wood-burning stove, hiking trails, and incredible views.",
+    "price": 120,
+    "location": "Aspen, USA",
+    "image": "https://picsum.photos/seed/aspen/400/300"
+  },
+  {
+    "id": 4,
+    "title": "Charming Apartment in Historic District",
+    "description": "Live like a local in this beautiful apartment located in a historic European city. Cobblestone streets and classic architecture await.",
+    "price": 165,
+    "location": "Rome, Italy",
+    "image": "https://picsum.photos/seed/rome/400/300"
+  }
+]
