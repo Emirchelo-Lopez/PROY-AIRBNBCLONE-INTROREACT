@@ -39,7 +39,7 @@ export default function Home() {
         to="/login"
         className="bg-red-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-600 transition-colors"
       >
-        Explore Accommodations
+        Explore
       </Link>
     </div>
   );
