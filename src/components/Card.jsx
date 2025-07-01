@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Card({ id, image, title, location, price }) {
+export default function Card({ id, image, title, location, price }) {
   return (
     <Link to={`/accommodations/${id}`}>
       <div className="bg-white rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
@@ -16,5 +16,3 @@ function Card({ id, image, title, location, price }) {
     </Link>
   );
 }
-
-export default Card;

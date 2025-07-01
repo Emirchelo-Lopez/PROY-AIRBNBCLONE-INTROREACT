@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "../components/Card"; // We'll create this next
 import Spinner from "../components/Spinner";
 
-function Accommodations() {
+export default function Accommodations() {
   // 1. Create a state for the listings data (initialize as an empty array).
   const [accommodations, setAccommodations] = useState([]);
 
@@ -64,5 +64,3 @@ function Accommodations() {
     </div>
   );
 }
-
-export default Accommodations;

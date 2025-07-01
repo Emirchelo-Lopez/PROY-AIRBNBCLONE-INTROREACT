@@ -4,7 +4,7 @@ import { isLoggedIn } from "../utils/auth";
 import Card from "../components/Card";
 import Spinner from "../components/Spinner";
 
-function Home() {
+export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(isLoggedIn());
   const [loading, setLoading] = useState(true);
   const [accommodations, setAccommodations] = useState([]);
@@ -65,5 +65,3 @@ function Home() {
 
   return isAuthenticated ? loading ? <Spinner /> : loggedInView : loggedOutView;
 }
-
-export default Home;

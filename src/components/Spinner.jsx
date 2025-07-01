@@ -1,4 +1,4 @@
-function Spinner() {
+export default function Spinner() {
   // The 'role="status"' and the 'sr-only' span are great for accessibility,
   // letting screen readers know that something is loading.
   return (
@@ -23,5 +23,3 @@ function Spinner() {
     </div>
   );
 }
-
-export default Spinner;

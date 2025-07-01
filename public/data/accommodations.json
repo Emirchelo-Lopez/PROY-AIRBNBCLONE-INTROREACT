@@ -30,5 +30,37 @@
     "price": 165,
     "location": "Rome, Italy",
     "image": "https://picsum.photos/seed/rome/400/300"
+  },
+  {
+    "id": 5,
+    "title": "Luxury Penthouse with City Views",
+    "description": "Experience the high life in this modern penthouse with panoramic city views, a private terrace, and top-notch amenities.",
+    "price": 400,
+    "location": "New York, USA",
+    "image": "https://picsum.photos/seed/nyc/400/300"
+  },
+  {
+    "id": 6,
+    "title": "Eco-Friendly Jungle Retreat",
+    "description": "Stay in a sustainable eco-lodge surrounded by lush jungle. Solar power, organic meals, and wildlife at your doorstep.",
+    "price": 210,
+    "location": "Costa Rica",
+    "image": "https://picsum.photos/seed/jungle/400/300"
+  },
+  {
+    "id": 7,
+    "title": "Classic Parisian Studio",
+    "description": "Chic and cozy studio in the heart of Paris. Walk to cafes, museums, and the Eiffel Tower.",
+    "price": 195,
+    "location": "Paris, France",
+    "image": "https://picsum.photos/seed/paris/400/300"
+  },
+  {
+    "id": 8,
+    "title": "Desert Dome Under the Stars",
+    "description": "Unique dome accommodation in the desert. Stargaze at night and enjoy peaceful solitude by day.",
+    "price": 175,
+    "location": "Joshua Tree, USA",
+    "image": "https://picsum.photos/seed/joshuatree/400/300"
   }
 ]

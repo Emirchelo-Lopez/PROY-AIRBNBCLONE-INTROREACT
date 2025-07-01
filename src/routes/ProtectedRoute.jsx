@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { isLoggedIn } from "../utils/auth";
 
-const ProtectedRoute = () => {
+export default function ProtectedRoute() {
   // 1. Check if the user is logged in using the function from auth.js
   const isAuthenticated = isLoggedIn();
   // 2. If the user is NOT authenticated, return the Navigate component
@@ -15,6 +15,4 @@ const ProtectedRoute = () => {
   //    The Outlet component will render the actual page component
   //    that this route is protecting (e.g., Accomodations).
   return <Outlet />; //...
-};
-
-export default ProtectedRoute;
+}

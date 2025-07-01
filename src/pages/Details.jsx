@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 
-function Details() {
+export default function Details() {
   // 1. Use the useParams hook to get the 'id' from the URL.
   const { id } = useParams();
 
@@ -78,5 +78,3 @@ function Details() {
     </div>
   );
 }
-
-export default Details;

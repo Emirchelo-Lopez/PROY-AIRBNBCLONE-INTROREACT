@@ -23,6 +23,7 @@ export default function NavBar() {
     logout();
     setIsAuthenticated(false);
     navigate("/");
+    window.location.reload();
   };
 
   return (

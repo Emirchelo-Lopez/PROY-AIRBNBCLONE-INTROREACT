@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../utils/auth";
 
-function SignUp() {
+export default function SignUp() {
   // 1. Create state variables for 'email' and 'password'.
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -110,5 +110,3 @@ function SignUp() {
     </div>
   );
 }
-
-export default SignUp;
