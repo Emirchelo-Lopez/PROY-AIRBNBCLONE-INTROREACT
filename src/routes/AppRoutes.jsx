@@ -9,6 +9,7 @@ import SignUp from "../pages/SignUp";
 
 // Route Guard Import
 import ProtectedRoute from "./ProtectedRoute";
+import Profile from "../pages/Profile";
 
 export default function AppRoutes() {
   return (
@@ -29,6 +30,7 @@ export default function AppRoutes() {
       <Route element={<ProtectedRoute />}>
         <Route path="/accommodations" element={<Accommodations />} />
         <Route path="/accommodations/:id" element={<Details />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
   );

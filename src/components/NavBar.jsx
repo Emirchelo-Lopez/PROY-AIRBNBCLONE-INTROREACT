@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { isLoggedIn, logout } from "../utils/auth";
+import { isLoggedIn, logout, getAuthenticatedUser } from "../utils/auth";
 
 export default function NavBar() {
   // 1. Create a state variable 'isAuthenticated' to hold the login status.
@@ -46,6 +46,12 @@ export default function NavBar() {
               to="/accommodations"
             >
               My Accommodations
+            </Link>
+            <Link
+              className="text-gray-700 hover:text-red-500 mx-4"
+              to="/profile"
+            >
+              Profile
             </Link>
             <button
               className="bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600"
