@@ -5,7 +5,8 @@
     "description": "A stunning cottage right on the beach, perfect for a romantic getaway. Enjoy the sound of the waves and beautiful sunsets.",
     "price": 250,
     "location": "Malibu, USA",
-    "image": "https://picsum.photos/seed/malibu/400/300"
+    "image": "https://picsum.photos/seed/malibu/400/300",
+    "rating": 4.8
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description": "Stylish and spacious loft in the heart of the city. Close to all major attractions, restaurants, and nightlife.",
     "price": 180,
     "location": "Tokyo, Japan",
-    "image": "https://picsum.photos/seed/tokyo/400/300"
+    "image": "https://picsum.photos/seed/tokyo/400/300",
+    "rating": 4.6
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "description": "Escape to this peaceful cabin in the mountains. Features a wood-burning stove, hiking trails, and incredible views.",
     "price": 120,
     "location": "Aspen, USA",
-    "image": "https://picsum.photos/seed/aspen/400/300"
+    "image": "https://picsum.photos/seed/aspen/400/300",
+    "rating": 4.7
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "description": "Live like a local in this beautiful apartment located in a historic European city. Cobblestone streets and classic architecture await.",
     "price": 165,
     "location": "Rome, Italy",
-    "image": "https://picsum.photos/seed/rome/400/300"
+    "image": "https://picsum.photos/seed/rome/400/300",
+    "rating": 4.5
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "description": "Experience the high life in this modern penthouse with panoramic city views, a private terrace, and top-notch amenities.",
     "price": 400,
     "location": "New York, USA",
-    "image": "https://picsum.photos/seed/nyc/400/300"
+    "image": "https://picsum.photos/seed/nyc/400/300",
+    "rating": 4.9
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "description": "Stay in a sustainable eco-lodge surrounded by lush jungle. Solar power, organic meals, and wildlife at your doorstep.",
     "price": 210,
     "location": "Costa Rica",
-    "image": "https://picsum.photos/seed/jungle/400/300"
+    "image": "https://picsum.photos/seed/jungle/400/300",
+    "rating": 4.8
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "description": "Chic and cozy studio in the heart of Paris. Walk to cafes, museums, and the Eiffel Tower.",
     "price": 195,
     "location": "Paris, France",
-    "image": "https://picsum.photos/seed/paris/400/300"
+    "image": "https://picsum.photos/seed/paris/400/300",
+    "rating": 4.7
   },
   {
     "id": 8,
@@ -61,6 +68,7 @@
     "description": "Unique dome accommodation in the desert. Stargaze at night and enjoy peaceful solitude by day.",
     "price": 175,
     "location": "Joshua Tree, USA",
-    "image": "https://picsum.photos/seed/joshuatree/400/300"
+    "image": "https://picsum.photos/seed/joshuatree/400/300",
+    "rating": 4.6
   }
 ]

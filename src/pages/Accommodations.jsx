@@ -36,31 +36,34 @@ export default function Accommodations() {
     return () => clearTimeout(timer);
   }, []); // Empty dependency array ensures this runs only once on mount.
 
-  // 4. Add a conditional render for the loading state.
-  if (loading) {
-    return <Spinner />;
-  }
-
+  // // 4. Add a conditional render for the loading state.
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Explore Accommodations</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {/* 5. Map over the 'accommodations' array. */}
-        {/* For each 'item' in the array, render a <Card /> component. */}
-        {/* Pass the item's data (id, title, image, etc.) as props to the Card. */}
-        {/* Don't forget to add a unique 'key' prop, like key={item.id}. */}
-        {accommodations.map((accommodation) => (
-          <Card
-            key={accommodation.id}
-            id={accommodation.id}
-            title={accommodation.title}
-            description={accommodation.description}
-            price={accommodation.price}
-            location={accommodation.location}
-            image={accommodation.image}
-          />
-        ))}
-      </div>
-    </div>
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold mb-6">Explore Accommodations</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {/* 5. Map over the 'accommodations' array. */}
+            {/* For each 'item' in the array, render a <Card /> component. */}
+            {/* Pass the item's data (id, title, image, etc.) as props to the Card. */}
+            {/* Don't forget to add a unique 'key' prop, like key={item.id}. */}
+            {accommodations.map((accommodation) => (
+              <Card
+                key={accommodation.id}
+                id={accommodation.id}
+                title={accommodation.title}
+                description={accommodation.description}
+                price={accommodation.price}
+                location={accommodation.location}
+                image={accommodation.image}
+                rating={accommodation.rating}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
