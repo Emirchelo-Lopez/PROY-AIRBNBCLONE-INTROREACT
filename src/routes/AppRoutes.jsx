@@ -10,6 +10,7 @@ import SignUp from "../pages/SignUp";
 // Route Guard Import
 import ProtectedRoute from "./ProtectedRoute";
 import Profile from "../pages/Profile";
+import NotFound from "../pages/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="*" element={<NotFound />} />
 
       {/* 1. Create a new Route that uses ProtectedRoute as its element. */}
       {/* This will act as a parent wrapper for all protected routes. */}
