@@ -28,17 +28,16 @@ export default function NavBar() {
 
   return (
     <nav className="bg-white shadow-md p-4 flex justify-between items-center">
-      <div>
-        <Link className="text-red-500 font-bold text-xl" to="/">
-          Airbnb Clone
-        </Link>
-      </div>
-      <div>
-        {/* 3. Use a ternary operator to check the 'isAuthenticated' state. */}
-        {/* If true, show the logged-in links. */}
-        {/* If false, show the logged-out links. */}
+      <Link className="flex items-center text-red-500 font-bold text-xl" to="/">
+        <img
+          src="https://www.vectorlogo.zone/logos/airbnb/airbnb-icon.svg"
+          alt="Airbnb Logo"
+          className="h-8 w-auto mr-2"
+        />
+        Airbnb Clone
+      </Link>
 
-        {/* Your conditional rendering logic here */}
+      <div>
         {isAuthenticated ? (
           <>
             <Link
