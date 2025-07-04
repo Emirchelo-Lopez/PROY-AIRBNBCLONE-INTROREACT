@@ -4,15 +4,11 @@ import { login } from "../utils/auth";
 import AuthLayout from "../components/AuthLayout";
 
 export default function LogIn() {
-  // 1. Create state variables for 'email' and 'password'.
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // 2. Create the handleSubmit function.
   const handleSubmit = (event) => {
-    // a. Prevent the default form submission which reloads the page.
-    // Your code here
     event.preventDefault();
 
     if (!email || !password) {
@@ -20,22 +16,15 @@ export default function LogIn() {
       return;
     }
 
-    // c. Call the login() function from auth.js, passing an object like { email: email }.
-    // Your code here
     login({ email: email });
 
-    // d. Navigate the user to the home page ('/').
-    // Your code here
     navigate("/");
 
-    // A better user experience is to force the whole app to re-check
-    // the auth status. Navigating and then reloading does this simply.
     window.location.reload();
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      {/* 3. The form's onSubmit should call your handleSubmit function. */}
       <AuthLayout>
         <form
           onSubmit={handleSubmit}
@@ -54,9 +43,7 @@ export default function LogIn() {
             <input
               type="email"
               id="email"
-              // a. The input's value should be tied to the 'email' state.
               value={email}
-              // b. The onChange handler should update the 'email' state.
               onChange={(e) => setEmail(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-red-500"
               placeholder="example@email.com"
@@ -72,9 +59,7 @@ export default function LogIn() {
             <input
               type="password"
               id="password"
-              // c. The input's value should be tied to the 'password' state.
               value={password}
-              // d. The onChange handler should update the 'password' state.
               onChange={(e) => setPassword(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-red-500"
               placeholder="********"

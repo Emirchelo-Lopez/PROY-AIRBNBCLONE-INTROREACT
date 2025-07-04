@@ -1,6 +1,4 @@
 export default function Spinner() {
-  // The 'role="status"' and the 'sr-only' span are great for accessibility,
-  // letting screen readers know that something is loading.
   return (
     <div role="status" className="flex justify-center items-center py-20">
       <svg

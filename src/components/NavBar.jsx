@@ -3,22 +3,15 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { isLoggedIn, logout } from "../utils/auth";
 
 export default function NavBar() {
-  // 1. Create a state variable 'isAuthenticated' to hold the login status.
-  //    Initialize it based on the isLoggedIn() function.
   const [isAuthenticated, setIsAuthenticated] = useState(isLoggedIn());
 
   const navigate = useNavigate();
   const location = useLocation();
 
-  // This effect will run when the component mounts and whenever the URL changes.
   useEffect(() => {
     setIsAuthenticated(isLoggedIn());
   }, [location]);
 
-  // 2. Create a function called 'handleLogout'.
-  //    This function should call the logout() utility,
-  //    update the 'isAuthenticated' state to false,
-  //    and navigate the user back to the home page ('/').
   const handleLogout = () => {
     logout();
     setIsAuthenticated(false);

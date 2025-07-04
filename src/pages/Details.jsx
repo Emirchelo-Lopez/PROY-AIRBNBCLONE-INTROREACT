@@ -3,23 +3,12 @@ import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 
 export default function Details() {
-  // 1. Use the useParams hook to get the 'id' from the URL.
   const { id } = useParams();
 
-  // 2. Create state for the specific accommodation (initialize as null)
-  //    and for the loading status.
   const [accommodation, setAccommodation] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 3. Fetch the data from '/data/alojamientos.json'.
-    //    Once you have the data (which is an array)...
-    //    a. Use the array's .find() method to find the accommodation
-    //       where its 'id' matches the 'id' from useParams.
-    //    b. HINT: The 'id' from useParams is a string, but in your data it's a number.
-    //       You'll need to convert one of them to make them match!
-    //    c. Set the found accommodation object into your state.
-    //    d. Set loading to false.
     const getAccommodation = async () => {
       try {
         const res = await fetch("/data/accommodations.json");

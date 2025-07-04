@@ -11,7 +11,7 @@ export default function AuthLayout({ children }) {
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
-        {children} {/* This is where your login or sign-up form will go */}
+        {children}
       </div>
     </div>
   );

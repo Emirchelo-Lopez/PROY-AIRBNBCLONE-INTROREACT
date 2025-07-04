@@ -7,10 +7,10 @@ import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import NotFound from "../pages/NotFound";
+import Profile from "../pages/Profile";
 
 // Route Guard Import
 import ProtectedRoute from "./ProtectedRoute";
-import Profile from "../pages/Profile";
 
 export default function AppRoutes() {
   return (
@@ -21,14 +21,7 @@ export default function AppRoutes() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="*" element={<NotFound />} />
 
-      {/* 1. Create a new Route that uses ProtectedRoute as its element. */}
-      {/* This will act as a parent wrapper for all protected routes. */}
-
-      {/* 2. Move the routes for '/alojamientos' and '/alojamientos/:id' */}
-      {/* to be nested *inside* this new ProtectedRoute wrapper. */}
-      {/* The path on the main accommodations route should now be 'index' */}
-      {/* or you can leave it as '/alojamientos' */}
-
+      {/* Protected Routes */}
       <Route element={<ProtectedRoute />}>
         <Route path="/accommodations" element={<Accommodations />} />
         <Route path="/accommodations/:id" element={<Details />} />
