@@ -6,11 +6,11 @@ import Details from "../pages/Details";
 import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
+import NotFound from "../pages/NotFound";
 
 // Route Guard Import
 import ProtectedRoute from "./ProtectedRoute";
 import Profile from "../pages/Profile";
-import NotFound from "../pages/NotFound";
 
 export default function AppRoutes() {
   return (

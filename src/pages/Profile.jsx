@@ -7,7 +7,7 @@ export default function Profile() {
   return (
     <AuthLayout>
       <div className="min-h-screen flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md flex flex-col items-center">
+        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg min-w-[350px] flex flex-col items-center">
           <header className="mb-6 w-full text-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-2">Profile</h1>
           </header>

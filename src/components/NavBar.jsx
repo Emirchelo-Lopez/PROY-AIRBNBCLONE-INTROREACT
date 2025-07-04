@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { isLoggedIn, logout, getAuthenticatedUser } from "../utils/auth";
+import { isLoggedIn, logout } from "../utils/auth";
 
 export default function NavBar() {
   // 1. Create a state variable 'isAuthenticated' to hold the login status.
